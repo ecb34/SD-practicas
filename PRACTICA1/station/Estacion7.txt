@@ -1,0 +1,4 @@
+Temperatura=30
+Humedad=90
+Luminosidad=450
+Pantalla=vivala%C3%B1

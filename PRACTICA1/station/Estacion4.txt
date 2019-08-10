@@ -1,0 +1,4 @@
+Temperatura=-29
+Humedad=34
+Luminosidad=450
+Pantalla=jajaja

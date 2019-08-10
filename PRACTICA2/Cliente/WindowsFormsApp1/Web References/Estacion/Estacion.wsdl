@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://estacion" xmlns:ns1="http://org.apache.axis2/xsd" targetNamespace="http://estacion" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+		Please Type your service description here
+	</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://estacion">
+      <xs:element name="getId">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getIdResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setLog">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="logLine" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getHum">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getHumResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setLum">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="encriptado" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setTemp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="encriptado" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setHum">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="encriptado" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLum">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLumResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="setLCD">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="encriptado" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLCD">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getLCDResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTemp">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTempResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="setLogRequest">
+    <wsdl:part name="parameters" element="ns:setLog" />
+  </wsdl:message>
+  <wsdl:message name="setLumRequest">
+    <wsdl:part name="parameters" element="ns:setLum" />
+  </wsdl:message>
+  <wsdl:message name="getHumRequest">
+    <wsdl:part name="parameters" element="ns:getHum" />
+  </wsdl:message>
+  <wsdl:message name="getHumResponse">
+    <wsdl:part name="parameters" element="ns:getHumResponse" />
+  </wsdl:message>
+  <wsdl:message name="setTempRequest">
+    <wsdl:part name="parameters" element="ns:setTemp" />
+  </wsdl:message>
+  <wsdl:message name="getLumRequest">
+    <wsdl:part name="parameters" element="ns:getLum" />
+  </wsdl:message>
+  <wsdl:message name="getLumResponse">
+    <wsdl:part name="parameters" element="ns:getLumResponse" />
+  </wsdl:message>
+  <wsdl:message name="setLCDRequest">
+    <wsdl:part name="parameters" element="ns:setLCD" />
+  </wsdl:message>
+  <wsdl:message name="getIdRequest">
+    <wsdl:part name="parameters" element="ns:getId" />
+  </wsdl:message>
+  <wsdl:message name="getIdResponse">
+    <wsdl:part name="parameters" element="ns:getIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="setHumRequest">
+    <wsdl:part name="parameters" element="ns:setHum" />
+  </wsdl:message>
+  <wsdl:message name="getLCDRequest">
+    <wsdl:part name="parameters" element="ns:getLCD" />
+  </wsdl:message>
+  <wsdl:message name="getLCDResponse">
+    <wsdl:part name="parameters" element="ns:getLCDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTempRequest">
+    <wsdl:part name="parameters" element="ns:getTemp" />
+  </wsdl:message>
+  <wsdl:message name="getTempResponse">
+    <wsdl:part name="parameters" element="ns:getTempResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EstacionPortType">
+    <wsdl:operation name="setLog">
+      <wsdl:input wsaw:Action="urn:setLog" message="ns:setLogRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="setLum">
+      <wsdl:input wsaw:Action="urn:setLum" message="ns:setLumRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="getHum">
+      <wsdl:input wsaw:Action="urn:getHum" message="ns:getHumRequest" />
+      <wsdl:output wsaw:Action="urn:getHumResponse" message="ns:getHumResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setTemp">
+      <wsdl:input wsaw:Action="urn:setTemp" message="ns:setTempRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="getLum">
+      <wsdl:input wsaw:Action="urn:getLum" message="ns:getLumRequest" />
+      <wsdl:output wsaw:Action="urn:getLumResponse" message="ns:getLumResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setLCD">
+      <wsdl:input wsaw:Action="urn:setLCD" message="ns:setLCDRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="getId">
+      <wsdl:input wsaw:Action="urn:getId" message="ns:getIdRequest" />
+      <wsdl:output wsaw:Action="urn:getIdResponse" message="ns:getIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setHum">
+      <wsdl:input wsaw:Action="urn:setHum" message="ns:setHumRequest" />
+    </wsdl:operation>
+    <wsdl:operation name="getLCD">
+      <wsdl:input wsaw:Action="urn:getLCD" message="ns:getLCDRequest" />
+      <wsdl:output wsaw:Action="urn:getLCDResponse" message="ns:getLCDResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTemp">
+      <wsdl:input wsaw:Action="urn:getTemp" message="ns:getTempRequest" />
+      <wsdl:output wsaw:Action="urn:getTempResponse" message="ns:getTempResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EstacionSoap11Binding" type="ns:EstacionPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="setLog">
+      <soap:operation soapAction="urn:setLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="setLum">
+      <soap:operation soapAction="urn:setLum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getHum">
+      <soap:operation soapAction="urn:getHum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setTemp">
+      <soap:operation soapAction="urn:setTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getLum">
+      <soap:operation soapAction="urn:getLum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setLCD">
+      <soap:operation soapAction="urn:setLCD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getId">
+      <soap:operation soapAction="urn:getId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setHum">
+      <soap:operation soapAction="urn:setHum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getLCD">
+      <soap:operation soapAction="urn:getLCD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTemp">
+      <soap:operation soapAction="urn:getTemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EstacionSoap12Binding" type="ns:EstacionPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="setLog">
+      <soap12:operation soapAction="urn:setLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="setLum">
+      <soap12:operation soapAction="urn:setLum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getHum">
+      <soap12:operation soapAction="urn:getHum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setTemp">
+      <soap12:operation soapAction="urn:setTemp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getLum">
+      <soap12:operation soapAction="urn:getLum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setLCD">
+      <soap12:operation soapAction="urn:setLCD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getId">
+      <soap12:operation soapAction="urn:getId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setHum">
+      <soap12:operation soapAction="urn:setHum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getLCD">
+      <soap12:operation soapAction="urn:getLCD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTemp">
+      <soap12:operation soapAction="urn:getTemp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EstacionHttpBinding" type="ns:EstacionPortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="setLog">
+      <http:operation location="setLog" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="setLum">
+      <http:operation location="setLum" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getHum">
+      <http:operation location="getHum" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setTemp">
+      <http:operation location="setTemp" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getLum">
+      <http:operation location="getLum" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setLCD">
+      <http:operation location="setLCD" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getId">
+      <http:operation location="getId" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setHum">
+      <http:operation location="setHum" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getLCD">
+      <http:operation location="getLCD" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTemp">
+      <http:operation location="getTemp" />
+      <wsdl:input>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="parameters" type="application/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Estacion">
+    <wsdl:port name="EstacionHttpSoap11Endpoint" binding="ns:EstacionSoap11Binding">
+      <soap:address location="http://localhost:8080/Estacion/services/Estacion.EstacionHttpSoap11Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="EstacionHttpSoap12Endpoint" binding="ns:EstacionSoap12Binding">
+      <soap12:address location="http://localhost:8080/Estacion/services/Estacion.EstacionHttpSoap12Endpoint/" />
+    </wsdl:port>
+    <wsdl:port name="EstacionHttpEndpoint" binding="ns:EstacionHttpBinding">
+      <http:address location="http://localhost:8080/Estacion/services/Estacion.EstacionHttpEndpoint/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
